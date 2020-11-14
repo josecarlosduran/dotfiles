@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+source "$DOTLY_PATH/scripts/self/utils/install.sh"
+
+export ZIM_HOME="$DOTLY_PATH/modules/zimfw"
+
+installer::install_zsh() {
+  output::error "Zsh not installed, installing"
+
+  if dot package install zsh 2>&1; then
+    output::solution "Zsh installed!"
+  else
+    output::error "Could not install Zsh!"
+    exit 5
+  fi
+}
+
+installer::install_fzf() {
+  output::error "Fzf not installed, installing"
+
+  if dot package install fzf 2>&1; then
+    output::solution "fzf installed!"
+  else
+    output::error "Could not install Fzf!"
+    exit 5
+  fi
+}
+
+##? Install dotly and setup dotfiles
+#?? 1.0.0
+##?
+##? Usage:
+##?    install
+
+dot() { "$DOTLY_PATH/bin/dot" "$@"; }
+
+output::answer "Creating dotfiles structure"
+dot dotfiles create 2>&1
+
+# @todo Backup if exists before
+output::answer "Setting up symlinks"
+dot symlinks apply 2>&1
+
+if ! platform::command_exists zsh; then
+  installer::install_zsh
+else
+  output::answer "Zsh already installed!"
+fi
+
+if ! str::contains zsh "$SHELL"; then
+  output::answer "Setting Zsh as the default shell (you'll have to logout and login to see the changes)"
+  sudo chsh -s "$(command -v zsh)"
+fi
+
+if ! platform::command_exists fzf; then
+  installer::install_fzf
+else
+  output::answer "Fzf already installed!"
+fi
+
+output::answer "Installing Zim"
+
+zsh "$ZIM_HOME/zimfw.zsh" install

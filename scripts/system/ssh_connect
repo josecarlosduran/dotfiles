@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+
+##? Connects to host by ssh
+#?? 1.0.0
+##?
+##? Usage:
+##?    ssh_connect
+
+docs::eval "$@"
+
+connection=$(cat $DOTFILES_PATH/private-ssh-connections |awk -F ';' '{print $1": " $2": -p "$4" "$5"@"$3}' |fzf --height 40%)
+string_connection=$(echo $connection |awk -F ':' '{print $3}')
+echo $string_connection
+ssh $string_connection

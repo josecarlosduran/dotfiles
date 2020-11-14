@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+
+##? Who open this port
+#?? 1.0.0
+##?
+##? Usage:
+##?    who_open_port <port>
+
+docs::eval "$@"
+lsof -i -P | grep -i ":$port"
+
+
+echo "😬 It´s all!"

@@ -1,0 +1,16 @@
+[user]
+	name = Jose Carlos Duran
+	email = josecarlosduran@gmail.com
+	signingkey = B9DDD5E9DE040609CB4F2EBE8DCC58EC9A9F373A
+
+[core]
+	excludesfile = ~/.gitignore_global
+	attributesfile = ~/.gitattributes
+	editor = nano
+	autocrlf = input
+[pull]
+	rebase = true
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg

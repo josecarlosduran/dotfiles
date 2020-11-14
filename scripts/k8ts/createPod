@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTFILES_PATH/scripts/core/_main.sh"
+
+##? Create a Kb8ts Pod Template
+#?? 1.0.0
+##?
+##? Usage:
+
+##?    createPod <name> <image> <port>
+
+docs::eval "$@"
+
+kubectl run "$1" --image=$2 --port=$3 --dry-run=client -o yaml > $1_pod.yaml
