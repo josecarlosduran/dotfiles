@@ -11,6 +11,6 @@
 [pull]
 	rebase = true
 [commit]
-	gpgsign = true
+	gpgsign = false
 [gpg]
 	program = gpg

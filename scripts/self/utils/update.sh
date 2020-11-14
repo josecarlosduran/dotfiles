@@ -28,7 +28,7 @@ apply_symlinks() {
   shift
 
   echo
-  "$DOTFILES_PATH/$DOTBOT_DIR/$DOTBOT_BIN" -d "$DOTFILES_PATH" -c "$CONFIG" "$@"
+  "$DOTLY_PATH/$DOTBOT_DIR/$DOTBOT_BIN" -d "$DOTFILES_PATH" -c "$CONFIG" "$@"
   echo
 }
 
