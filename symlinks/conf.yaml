@@ -16,3 +16,4 @@
     ~/.gitconfig: git/.gitconfig
     ~/.gitattributes: git/.gitattributes
     ~/.gitignore_global: git/.gitignore_global
+    ~/composer.json: langs/php/composer.json
