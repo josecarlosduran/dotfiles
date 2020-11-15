@@ -1,0 +1,28 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+brew "bat"
+brew "cmatrix"
+brew "exa"
+brew "fzf"
+brew "git"
+brew "gnu-sed"
+brew "pinentry"
+brew "gnupg"
+brew "mas"
+brew "node"
+brew "pinentry-mac"
+brew "python@3.9"
+brew "sl"
+brew "tldr"
+cask "balenaetcher"
+cask "dozer"
+cask "iterm2"
+cask "spectacle"
+mas "Evernote", id: 406056744
+mas "GoodNotes", id: 1444383602
+mas "Paste", id: 967805235
+mas "Spark", id: 1176895641
+mas "The Unarchiver", id: 425424353
+mas "Todoist", id: 585829637
