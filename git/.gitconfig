@@ -1,7 +1,7 @@
 [user]
 	name = Jose Carlos Duran
 	email = josecarlosduran@gmail.com
-	signingkey = B9DDD5E9DE040609CB4F2EBE8DCC58EC9A9F373A
+	signingkey = 36D84CF355BB1BC3C56EDA3A61AE6D5FC3F5525E
 
 [core]
 	excludesfile = ~/.gitignore_global
@@ -11,6 +11,6 @@
 [pull]
 	rebase = true
 [commit]
-	gpgsign = false
+	gpgsign = true
 [gpg]
 	program = gpg
