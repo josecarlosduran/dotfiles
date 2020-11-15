@@ -8,4 +8,6 @@ alias dps='docker ps'
 alias fuck='sudo $(fc -ln -1)'
 alias please='sudo $(fc -ln -1)'
 alias sshc='dot system ssh_connect'
+alias diff='idea diff'
+
 
