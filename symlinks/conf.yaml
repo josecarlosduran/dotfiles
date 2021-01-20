@@ -17,3 +17,5 @@
     ~/.gitattributes: git/.gitattributes
     ~/.gitignore_global: git/.gitignore_global
     ~/.composer/composer.json: langs/php/composer.json
+    ~/.config/karabiner.edn: os/mac/karabiner-goku/karabiner.edn
+
