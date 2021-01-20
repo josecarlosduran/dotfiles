@@ -1,7 +1,9 @@
+tap "candid82/brew"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "yqrashawn/goku"
 brew "python@3.9"
 brew "awscli"
 brew "bat"
@@ -18,6 +20,7 @@ brew "node"
 brew "pinentry-mac"
 brew "sl"
 brew "tldr"
+brew "yqrashawn/goku/goku"
 cask "balenaetcher"
 cask "brackets"
 cask "dozer"
@@ -28,7 +31,8 @@ cask "openvpn-connect"
 cask "spectacle"
 mas "Evernote", id: 406056744
 mas "GoodNotes", id: 1444383602
+mas "Numbers", id: 409203825
 mas "Paste", id: 967805235
 mas "Spark", id: 1176895641
 mas "The Unarchiver", id: 425424353
-mas "Todoist", id: 585829637
+mas "Xcode", id: 497799835
